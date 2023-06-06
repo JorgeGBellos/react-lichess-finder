@@ -1,7 +1,10 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 export const PlayerCard = ({player, IMG_URL}) => {
+  
   return (
+    <Link to={`/player/${player.username}`}>
     <div className="player">
       <div>
         <p>{player.username}</p>
@@ -14,5 +17,6 @@ export const PlayerCard = ({player, IMG_URL}) => {
         <h3>{`Blitz: ${player.perfs.blitz.rating}`}</h3>
       </div>
     </div>
+    </Link>
   );
 };
